@@ -82,7 +82,7 @@ function temperatureInF(/* code here */temp, unit) {
   if (unit === 'F') {
     return temp + unit;
   }
-  return temperatureCtoF + unit;
+  return temperatureCtoF(temp) + 'F';
 }
 
 
