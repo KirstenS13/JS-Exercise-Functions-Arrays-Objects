@@ -321,8 +321,19 @@ function getCarInfoById(/* code here */array, num) {
  * with a `car_year` which is at most the given desired max year,
  * in the same order as they appear in the original inventory.
 */
-function getOlderCars(/* code here */) {
+function getOlderCars(/* code here */array, maxYear) {
   /* code here */
+  const olderCars = [];
+
+  for (let i = 0; i < array.length; i++) {
+    const car = array[i];
+
+    if (car.car_year <= maxYear) {
+      olderCars.push(car);
+    }
+  }
+
+  return olderCars;
 }
 
 /**
