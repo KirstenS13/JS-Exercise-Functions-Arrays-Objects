@@ -377,8 +377,15 @@ function getGermanCars(/* code here */array) {
  *         (1) causes the odometer in the object to be increased by the distance,
  *         (2) returns the updated value of the `odometer`.
 */
-function carMaker(/* code here */) {
+function carMaker(/* code here */num) {
   /* code here */
+  const distanceObject = {
+    odometer: num,
+    drive: function(distance) {
+      let odometer = num + distance;
+      return this.odometer;
+    }
+  }
 }
 
 /// ////// END OF CHALLENGE /////////
